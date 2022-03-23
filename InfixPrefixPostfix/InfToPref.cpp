@@ -35,11 +35,11 @@ private:
         return false;
     }
 
-    bool isOpenBracket(string string) {
+    bool isOpenBracket(const string& string) {
         return OPEN_BRACKET == string;
     }
 
-    bool isCloseBracket(string string) {
+    bool isCloseBracket(const string& string) {
         return CLOSE_BRACKET == string;
     }
 

@@ -13,7 +13,7 @@ private:
     string output;
     stack <string> stack;
 
-    bool isNumber(string string) {
+    static bool isNumber(const string& string) {
         for (char a : string){
             if (a != 45){
                 if ((a < 48) || (a > 57)) {
@@ -27,7 +27,7 @@ private:
         return true;
     }
 
-    bool isCharacter(string string) {
+    static bool isCharacter(string string) {
         if (string[0] >=  'a' & string[0] <= 'z') {
             return true;
         }
@@ -35,7 +35,7 @@ private:
         return false;
     }
 
-    bool isOperator(string string) {
+    bool isOperator(const string& string) {
         for (int i = 0; OPERATORS.length(); i++) {
             if (to_string(OPERATORS[i]) == string) {
                 return true;
@@ -45,15 +45,15 @@ private:
         return false;
     }
 
-    bool isOpenBracket(string string) {
+    bool isOpenBracket(const string& string) {
         return OPEN_BRACKET == string;
     }
 
-    bool isCloseBracket(string string) {
+    bool isCloseBracket(const string& string) {
         return CLOSE_BRACKET == string;
     }
 
-    int getPriority(string string) {
+    static int getPriority(const string& string) {
         if (string == "+" || string == "-") {
             return 0;
         } else if (string == "*" || string == "/") {
