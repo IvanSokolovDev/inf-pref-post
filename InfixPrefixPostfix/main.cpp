@@ -5,6 +5,7 @@
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "ru_RU.UTF-8");
     string input = "(a + b) / (c + d - 1)";
     //string input = "(a+3)*5-(2*b)";
     //string input = "1 + (2 * 3) / 4 - 5";
